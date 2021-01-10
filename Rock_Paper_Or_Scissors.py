@@ -43,13 +43,21 @@ while x is not False:
             print(f"It is a draw")
         elif Player_choice == 0 and Computer_choice == 2:
             print(f"You won")
+        elif Player_choice == 2 and Computer_choice == 0:
+            print(f"You lost")
         elif Player_choice > Computer_choice:
             print(f"You won")
         elif Player_choice < Computer_choice:
             print(f"You lost")
     else:
         print(f"You lost (choice does not exist or unknown character")
-
-    b = input("Play again? y/N: ").lower()
-    if b == "n":
-        x = False
+    a = True
+    while a is not False:
+        b = input("Play again? y/N: ").lower()
+        if b == "n":
+            x = False
+            a = False
+        elif b == "y":
+            a = False
+        else:
+            print("User input not recognised")
